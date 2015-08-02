@@ -1,0 +1,51 @@
+@keyframes slideInOut{
+    0% {
+        opacity: 0;
+        transform: translate(0,20px) rotate(30deg) scale(0.8);
+        /*text-shadow: 0 0 80px rgba(0,0,0,0.2);*/
+    }
+    20%, 90%{
+        opacity: 1;
+        transform: translate(0,0) rotate(0deg) scale(1);
+        /*text-shadow: 0 0 20px rgba(0,0,0,0.5);*/
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(0,20px) rotate(-30deg) scale(0.75);
+        /*text-shadow: 0 0 80px rgba(0,0,0,0.2);*/
+    }
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #DC143C;
+    color: #F0FFFF;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+}
+
+.bukvi{
+    z-index: 1;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    list-style: none;
+    display: table;
+}
+
+.bukvi li{
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+    animation: 5s slideInOut ease-in-out;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 30vw;
+    text-shadow: 0 0 20px rgba(0,0,0,0.2)
+}
