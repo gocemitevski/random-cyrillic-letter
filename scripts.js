@@ -11,14 +11,13 @@ function prikaziNovaBukva() {
 
     // Провери дали следната и видливата буква се исти.
     if (slednaZaPrikazuvanjeId !== vidlivaBukvaId) {
-        // Ако се исти, прикажи друга буква.
         $('.bukvi li').hide(); // Скриј ги сите букви
         $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
     }
     else {
+        // Ако се исти, прикажи друга буква.
         prikaziNovaBukva();
     }
-
 
 }
 
