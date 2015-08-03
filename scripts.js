@@ -10,13 +10,15 @@ function prikaziNovaBukva() {
     var slednaZaPrikazuvanjeId = getRandomInt(0, 30);
 
     // Провери дали следната и видливата буква се исти.
-    while (slednaZaPrikazuvanjeId === vidlivaBukvaId) {
+    if (slednaZaPrikazuvanjeId !== vidlivaBukvaId) {
         // Ако се исти, прикажи друга буква.
-        slednaZaPrikazuvanjeId = getRandomInt(0, 30);
+        $('.bukvi li').hide(); // Скриј ги сите букви
+        $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
+    }
+    else {
+        prikaziNovaBukva();
     }
 
-    $('.bukvi li').hide(); // Скриј ги сите букви
-    $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
 
 }
 
