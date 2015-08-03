@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 function prikaziNovaBukva() {
 
-    var vidlivaBukvaId = $('.bukvi li:visible').eq();
+    var vidlivaBukvaId = $('.bukvi li:visible').index();
     var slednaZaPrikazuvanjeId = getRandomInt(0, 30);
 
     // Провери дали следната и видливата буква се исти.
