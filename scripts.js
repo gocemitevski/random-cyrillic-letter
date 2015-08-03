@@ -6,11 +6,11 @@ $(document).ready(function () {
 
 function prikaziNovaBukva() {
 
-    var vidlivaBukva = $('.bukvi li:visible');
+    var vidlivaBukvaId = $('.bukvi li:visible').eq();
     var slednaZaPrikazuvanjeId = getRandomInt(0, 30);
 
     // Провери дали следната и видливата буква се исти.
-    while (slednaZaPrikazuvanjeId === vidlivaBukva.eq()) {
+    while (slednaZaPrikazuvanjeId === vidlivaBukvaId) {
         // Ако се исти, прикажи друга буква.
         slednaZaPrikazuvanjeId = getRandomInt(0, 30);
     }
