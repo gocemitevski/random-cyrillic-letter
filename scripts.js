@@ -9,16 +9,14 @@ function prikaziNovaBukva() {
     var vidlivaBukva = $('.bukvi li:visible');
     var slednaZaPrikazuvanjeId = getRandomInt(0, 30);
 
-    $('.bukvi li').hide(); // Скриј ги сите букви
-
     // Провери дали следната и видливата буква се исти.
-    if (slednaZaPrikazuvanjeId === vidlivaBukva.eq()) {
+    while (slednaZaPrikazuvanjeId === vidlivaBukva.eq()) {
         // Ако се исти, прикажи друга буква.
-        prikaziNovaBukva();
+        slednaZaPrikazuvanjeId = getRandomInt(0, 30);
     }
-    else {
-        $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
-    }
+
+    $('.bukvi li').hide(); // Скриј ги сите букви
+    $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
 
 }
 
