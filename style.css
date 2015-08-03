@@ -40,7 +40,7 @@ body{
 
 .bukvi li{
     margin: 0;
-    display: table-cell;
+    display: none;
     vertical-align: middle;
     text-transform: uppercase;
     animation: 5s slideInOut ease-in-out;

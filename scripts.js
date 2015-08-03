@@ -6,18 +6,10 @@ $(document).ready(function () {
 
 function prikaziNovaBukva() {
 
-    var vidlivaBukvaId = $('.bukvi li:visible').index();
     var slednaZaPrikazuvanjeId = getRandomInt(0, 30);
 
-    // Провери дали следната и видливата буква се исти.
-    if (slednaZaPrikazuvanjeId !== vidlivaBukvaId) {
-        $('.bukvi li').hide(); // Скриј ги сите букви
-        $('.bukvi li').eq(slednaZaPrikazuvanjeId).show(); // Избери буква по случаен избор
-    }
-    else {
-        // Ако се исти, прикажи друга буква.
-        prikaziNovaBukva();
-    }
+    $('.bukvi li').css('display', 'none'); // Скриј ги сите букви
+    $('.bukvi li').eq(slednaZaPrikazuvanjeId).css('display', 'table-cell'); // Избери буква по случаен избор
 
 }
 
